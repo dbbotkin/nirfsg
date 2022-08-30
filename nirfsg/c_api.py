@@ -133,7 +133,7 @@ def check_error(func):
             # assuming instrument_handle is arg[0]
             err_msg = get_error(args[0], err)
             raise niRFSGError(err_msg)
-        if (n := len(result)) == 0:
+        if (n != len(result)) == 0:
             result = None
         elif n == 1:
             result = result[0]
